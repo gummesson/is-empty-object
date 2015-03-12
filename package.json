@@ -1,0 +1,29 @@
+{
+  "name": "is-empty-object",
+  "version": "1.0.0",
+  "description": "Check if an object is empty.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gummesson/is-empty-object.git"
+  },
+  "keywords": [
+    "object",
+    "empty"
+  ],
+  "author": "Ellen Gummesson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gummesson/is-empty-object/issues"
+  },
+  "homepage": "https://github.com/gummesson/is-empty-object",
+  "dependencies": {
+    "type-of": "^2.0.1"
+  },
+  "devDependencies": {
+    "tape": "^3.5.0"
+  },
+  "scripts": {
+    "test": "node test/"
+  }
+}
