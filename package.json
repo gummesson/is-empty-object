@@ -17,9 +17,7 @@
     "url": "https://github.com/gummesson/is-empty-object/issues"
   },
   "homepage": "https://github.com/gummesson/is-empty-object",
-  "dependencies": {
-    "type-of": "^2.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "tape": "^3.5.0"
   },
