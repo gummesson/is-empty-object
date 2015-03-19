@@ -2,10 +2,16 @@
  * Dependencies
  */
 
-var typeOf = require('type-of')
+var owns = Object.prototype.hasOwnProperty;
+var OBJECT = "object";
 
 /**
- * Check if `obj` is empty.
+ * Check whether `obj` is empty.
+ * Works for objects and sparse arrays and only considers enumerable, owned
+ * properties or indexes.
+ * Short circuits on the first encountered property.
+ * Creates no garbage.
+ * Returns undefined for non-objects.
  *
  * @param  {object} obj
  * @return {boolean}
@@ -14,7 +20,15 @@ var typeOf = require('type-of')
  */
 
 function isEmptyObject(obj) {
-  return typeOf(obj) === 'object' && !Object.keys(obj).length
+  if (!obj || typeof obj !== OBJECT) {
+    return;
+  }
+  for (var name in obj) {
+    if (owns.call(obj, name)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
