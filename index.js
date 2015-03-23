@@ -2,7 +2,7 @@
  * Dependencies
  */
 
-var typeOf = require('type-of')
+var isArray = Array.isArray
 
 /**
  * Check if `obj` is empty.
@@ -14,7 +14,9 @@ var typeOf = require('type-of')
  */
 
 function isEmptyObject(obj) {
-  return typeOf(obj) === 'object' && !Object.keys(obj).length
+  if (!obj || !typeof obj === 'object' || isArray(obj))
+    return false
+  return !Object.keys(obj).length
 }
 
 /**
