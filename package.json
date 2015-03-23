@@ -19,9 +19,13 @@
   "homepage": "https://github.com/gummesson/is-empty-object",
   "dependencies": {},
   "devDependencies": {
+    "browserify": "^9.0.3",
+    "smokestack": "^3.2.1",
+    "tap-closer": "^1.0.0",
     "tape": "^3.5.0"
   },
   "scripts": {
-    "test": "node test/"
+    "test": "node test/",
+    "test:browser": "browserify test/ | tap-closer | smokestack"
   }
 }
