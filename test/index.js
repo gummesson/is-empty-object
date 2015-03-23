@@ -10,8 +10,8 @@ var isEmptyObject = require('../')
  */
 
 test('isEmptyObject(obj)', function(assert) {
-  assert.equal(isEmptyObject({}), true, 'returns true if empty')
-  assert.equal(isEmptyObject({ one: 1 }), false, 'returns false if not empty')
-  assert.equal(isEmptyObject([]), false, 'returns false if not an object')
+  assert.equal(isEmptyObject({}), true)
+  assert.equal(isEmptyObject({ one: 1 }), false)
+  assert.equal(isEmptyObject([]), false)
   assert.end()
 })
