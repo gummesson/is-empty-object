@@ -1,6 +1,6 @@
 {
   "name": "is-empty-object",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Check if an object is empty.",
   "main": "index.js",
   "repository": {
