@@ -2,8 +2,6 @@
  * Dependencies
  */
 
-var isArray = Array.isArray
-
 /**
  * Check if `obj` is empty.
  *
@@ -14,7 +12,7 @@ var isArray = Array.isArray
  */
 
 function isEmptyObject(obj) {
-  if (!obj || typeof obj !== 'object' || isArray(obj))
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj))
     return false
   return !Object.keys(obj).length
 }
